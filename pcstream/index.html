@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pcstream — OutSight</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+  :root { --accent: #c8793f; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65; color: #1d2129; background: #faf8f5; margin: 0; padding: 0;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 3px solid var(--accent); padding-bottom: 24px; margin-bottom: 32px; }
+  header .brand { font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  h1 { font-size: 28px; margin: 12px 0 4px; }
+  h1.fr { color: #555; font-size: 22px; margin-top: 0; font-weight: 600; }
+  .dl { background: #fff; border: 1px solid #e5e0d8; border-radius: 10px; padding: 20px; margin-bottom: 24px; }
+  .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;
+    padding: 12px 22px; border-radius: 8px; font-size: 17px; }
+  .dl .small { color: #666; font-size: 13px; margin-top: 12px; overflow-wrap: anywhere; }
+  .dl code { font-size: 12px; }
+  nav.lang { background: #fff; border: 1px solid #e5e0d8; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 15px; }
+  nav.lang a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  h2 { font-size: 22px; margin-top: 48px; padding-top: 24px; border-top: 1px solid #e5e0d8; }
+  h2.lang { font-size: 26px; }
+  h3 { font-size: 17px; margin-top: 32px; color: #333; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); }
+  hr { display: none; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  th, td { border: 1px solid #e5e0d8; padding: 8px 10px; text-align: left; }
+  th { background: #f1ece5; }
+  blockquote { margin: 16px 0; padding: 10px 16px; background: #fff4e8; border-left: 4px solid var(--accent); }
+  code { background: #f1ece5; padding: 1px 5px; border-radius: 4px; }
+  footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid #e5e0d8; color: #777; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand"><a href="/" style="text-decoration:none">OutSight</a></div>
+  <h1>pcstream — your PC screen in your headset</h1>
+  <h1 class="fr">pcstream — l'écran de votre PC dans votre casque</h1>
+</header>
+
+<div class="dl">
+  <a class="btn" href="pcstream.exe" download>⬇ pcstream.exe</a>
+  &nbsp; Windows 10 / 11 · 1.1 MB · experimental / expérimental
+  <div class="small">
+    SHA-256 : <code>30188b38f97f980e56e020c0687aa235a9d6bfbf6963e2c51d2c58f78632474a</code><br>
+    <a href="THIRD_PARTY_NOTICES.txt">THIRD_PARTY_NOTICES.txt</a> (licences)
+  </div>
+</div>
+
+<nav class="lang">
+  🇬🇧 <a href="#en">English guide</a> &nbsp;·&nbsp; 🇫🇷 <a href="#fr">Guide en français</a>
+</nav>
+
+<h2 id="en" class="lang">🇬🇧 English guide</h2>
+<p>pcstream shows the screen of your Windows PC in your Meta Quest headset, driven with the
+controllers: click, scroll, type, and even play games with a gamepad. Everything goes over your
+Wi-Fi, with no cable.</p>
+<p>pcstream is displayed in the language of your Windows: this guide uses the English names. On a
+French Windows, the menus are in French; see the French guide.</p>
+<hr />
+<h2>What you need</h2>
+<ul>
+<li>A <strong>Meta Quest 3 or 3S headset</strong> with the app installed.</li>
+<li>A <strong>PC running Windows 10 or 11</strong>, with a recent NVIDIA, AMD or Intel graphics card.</li>
+<li>The PC and the headset on <strong>the same network</strong> (the same router).</li>
+</ul>
+<p><strong>For the best picture:</strong> connect the PC to the router with a <strong>network cable</strong>, and connect the
+headset over <strong>5 GHz Wi-Fi or Wi-Fi 6</strong>, not far from the router.</p>
+<hr />
+<h2>1. Start pcstream on the PC</h2>
+<ol>
+<li>Double-click <strong><code>pcstream.exe</code></strong>. Nothing to install.</li>
+<li>If Windows shows <em>"Windows protected your PC"</em>, click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+<li>If a balloon says <strong>"pcstream is blocked by the firewall"</strong>: right-click the icon &gt;
+   <strong>Allow in Windows Firewall…</strong> &gt; <strong>Yes</strong>, then <strong>Yes</strong> in the Windows prompt.
+   (pcstream is only allowed on your local network.)</li>
+<li>A <strong>small screen icon</strong> appears at the bottom right, near the clock. If you cannot see it,
+   click the small <strong>^</strong> arrow next to the clock.</li>
+</ol>
+<p>That is all: pcstream runs in the background, with no window.</p>
+<hr />
+<h2>2. Connect the headset (once only)</h2>
+<ol>
+<li>On the PC: <strong>right-click the pcstream icon &gt; Pair a headset…</strong>
+   The next steps must be done within 2 minutes.</li>
+<li>In the headset: order the <strong>PC screen</strong> from the <strong>Delivery menu</strong>.</li>
+<li>A <strong>6-digit code</strong> is shown <strong>under the screen in the headset</strong> and <strong>on the PC</strong>.</li>
+<li><strong>If the two codes are identical:</strong></li>
+<li>in the headset, press <strong>A</strong>;</li>
+<li>on the PC, click <strong>Yes</strong>.</li>
+</ol>
+<p>Done. From then on, the screen connects by itself as soon as it appears in the headset.</p>
+<blockquote>
+<p>⚠️ <strong>If the codes are different, or if a request arrives when you did nothing, answer No.</strong>
+Someone else may be trying to connect to your PC.</p>
+</blockquote>
+<hr />
+<h2>3. Use the screen</h2>
+<p>Aim at the screen with the <strong>right controller</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Trigger</strong></td>
+<td>left click (hold = drag)</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>right click</td>
+</tr>
+<tr>
+<td><strong>Thumbstick</strong></td>
+<td>scroll (up/down, left/right)</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>open the headset's keyboard to type</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Move the screen:</strong> grab the <strong>handle</strong> under the picture, put the screen where you want it and
+let go: it stays there.</p>
+<p><strong>Make the screen bigger or smaller:</strong> hold the handle and push the <strong>thumbstick</strong> up (bigger) or
+down (smaller). The size is remembered for next time.</p>
+<p>The picture adapts by itself: sharpness is set from the distance of the screen, and quality
+adjusts if the Wi-Fi gets weaker.</p>
+<hr />
+<h2>4. Play with a gamepad</h2>
+<p>The PC sees an <strong>Xbox controller</strong>: it works in every game that supports a gamepad.</p>
+<p><strong>Once only:</strong> on the PC, right-click the pcstream icon &gt; <strong>Install the gamepad driver…</strong>, then
+accept the Windows confirmation. pcstream downloads the free ViGEmBus driver from its official
+page and checks that it is exactly the audited version before installing it.</p>
+<p><strong>With a Bluetooth gamepad</strong> (Xbox, PlayStation…): connect it to the headset (Quest Settings &gt;
+Devices &gt; Bluetooth). It is passed to the PC by itself as soon as it is used, with the PC screen
+shown.</p>
+<p><strong>With the Quest controllers:</strong> hold <strong>≡</strong> (left controller) for one second then release to
+switch to <strong>gamepad mode</strong>. Same gesture to go back to the mouse. In gamepad mode, the
+thumbsticks no longer move you in the headset (no teleport, no turning): they are only used by
+the PC game.</p>
+<table>
+<thead>
+<tr>
+<th>Quest controllers</th>
+<th>Xbox controller</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thumbsticks (and thumbstick click)</td>
+<td>left / right sticks</td>
+</tr>
+<tr>
+<td>A, B, X, Y</td>
+<td>A, B, X, Y</td>
+</tr>
+<tr>
+<td>Triggers</td>
+<td>LT / RT</td>
+</tr>
+<tr>
+<td>Grip buttons</td>
+<td>LB / RB</td>
+</tr>
+<tr>
+<td>≡ (short press)</td>
+<td>Start</td>
+</tr>
+<tr>
+<td>≡ held + right thumbstick</td>
+<td>D-pad</td>
+</tr>
+<tr>
+<td>≡ held + B</td>
+<td>View (Back)</td>
+</tr>
+<tr>
+<td><strong>Pointing with the right controller</strong></td>
+<td><strong>aim</strong> (like a mouse), on top of the right stick</td>
+</tr>
+</tbody>
+</table>
+<p>The game's vibrations are played in the Bluetooth gamepad or in the Quest controllers.</p>
+<blockquote>
+<p>Aiming too fast or too slow? Adjust the <strong>mouse sensitivity</strong> in the game's options.</p>
+</blockquote>
+<hr />
+<h2>The icon's menu (right-click)</h2>
+<table>
+<thead>
+<tr>
+<th>Menu</th>
+<th>What it is for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pair a headset…</strong></td>
+<td>connect a new headset</td>
+</tr>
+<tr>
+<td><strong>Paired headsets</strong></td>
+<td>see the connected headsets, remove one (it will no longer be able to connect)</td>
+</tr>
+<tr>
+<td><strong>Displayed screen</strong></td>
+<td>(PC with several monitors) choose the monitor shown in the headset</td>
+</tr>
+<tr>
+<td><strong>Video format</strong></td>
+<td>leave it on <strong>Auto</strong>; only change it if the picture is a problem</td>
+</tr>
+<tr>
+<td><strong>Sound in the headset</strong></td>
+<td>the PC's sound plays in the headset (on by default)</td>
+</tr>
+<tr>
+<td><strong>Install the gamepad driver…</strong></td>
+<td>once only, to play with a gamepad (see step 4)</td>
+</tr>
+<tr>
+<td><strong>Pause</strong></td>
+<td>cuts the picture at once, without quitting</td>
+</tr>
+<tr>
+<td><strong>Start with Windows</strong></td>
+<td>pcstream starts by itself when the PC is turned on</td>
+</tr>
+<tr>
+<td><strong>Open the log</strong></td>
+<td>useful when contacting support</td>
+</tr>
+<tr>
+<td><strong>Erase my data and quit…</strong></td>
+<td>remove everything before uninstalling</td>
+</tr>
+<tr>
+<td><strong>Quit</strong></td>
+<td>close pcstream</td>
+</tr>
+</tbody>
+</table>
+<p>The colour of the icon shows the state: <strong>grey</strong> waiting, <strong>blue</strong> connected,
+<strong>green</strong> pairing in progress, <strong>orange</strong> paused.</p>
+<hr />
+<h2>Not working?</h2>
+<p><strong>"PC not found" in the headset</strong></p>
+<ul>
+<li>Check that pcstream is running on the PC (icon near the clock).</li>
+<li>Check that the PC and the headset are on <strong>the same network</strong>: not the "guest" Wi-Fi, not a
+  phone's connection sharing.</li>
+<li>The firewall may be blocking pcstream: if the icon's menu shows
+  <strong>⚠ Allow in Windows Firewall…</strong>, click it and accept.</li>
+<li>If <code>pcstream.exe</code> was moved to another folder, give this authorization again (it is tied to
+  where the file is).</li>
+</ul>
+<p><strong>The headset was reset, or it no longer connects</strong>
+Remove it in <strong>Paired headsets</strong>, then pair it again (step 2).</p>
+<p><strong>The picture stutters or freezes now and then</strong></p>
+<ul>
+<li>Move closer to the router, or use 5 GHz Wi-Fi or Wi-Fi 6.</li>
+<li>Connect the PC to the router with a cable.</li>
+<li>Avoid big downloads while using pcstream.</li>
+</ul>
+<p><strong>The gamepad does nothing in the game</strong></p>
+<ul>
+<li>The icon's menu must show <strong>Gamepads: driver installed</strong>. If not, install the driver
+  (step 4); after the installation, the PC may need a restart.</li>
+<li>A few games do not accept the mouse and the gamepad at the same time: aiming by pointing does
+  not work with them, so use the right stick.</li>
+</ul>
+<p><strong>Some windows do not react to clicks</strong>
+The "administrator" windows of Windows (installations, confirmations with a shield) cannot be
+driven remotely, for security. Confirm them directly on the PC.</p>
+<p><strong>The picture freezes during a Windows confirmation</strong>
+This is normal: Windows hides its security confirmation screen from every app. The picture
+comes back as soon as it is confirmed on the PC.</p>
+<hr />
+<h2>Security and privacy</h2>
+<ul>
+<li>The picture and the commands are <strong>encrypted</strong> between your PC and your headset.</li>
+<li>Only the headsets <strong>you have paired</strong> can connect, and only from <strong>your local network</strong>.</li>
+<li>Nothing goes through the internet, and nothing is sent anywhere but to your headset. The only
+  exception, and only at your request: the download of the gamepad driver from its official page
+  (GitHub), refused if it does not match the audited version byte for byte.</li>
+</ul>
+<hr />
+<h2>Uninstall</h2>
+<ol>
+<li>Right-click the icon &gt; <strong>Erase my data and quit…</strong></li>
+<li>Delete the <strong><code>pcstream.exe</code></strong> file.</li>
+<li>If the gamepad driver was installed: Windows Settings &gt; Apps &gt; <strong>ViGEm Bus Driver</strong> &gt;
+   Uninstall.</li>
+</ol>
+<hr />
+<p><em>The licences of the components used are in <code>THIRD_PARTY_NOTICES.txt</code>.</em></p>
+
+<h2 id="fr" class="lang">🇫🇷 Guide en français</h2>
+<p>pcstream s'affiche dans la langue de votre Windows : ce guide utilise les noms français. Sur un
+Windows dans une autre langue, les menus sont en anglais ; voir le guide anglais.</p>
+<p>pcstream affiche l'écran de votre PC Windows dans votre casque Meta Quest, piloté avec les
+manettes : clic, défilement, clavier, et même les jeux à la manette. Tout passe par votre Wi-Fi,
+sans câble.</p>
+<hr />
+<h2>Ce qu'il faut</h2>
+<ul>
+<li>Un <strong>casque Meta Quest 3 ou 3S</strong> avec l'appli installée.</li>
+<li>Un <strong>PC sous Windows 10 ou 11</strong>, avec une carte graphique NVIDIA, AMD ou Intel récente.</li>
+<li>Le PC et le casque sur <strong>le même réseau</strong> (la même box).</li>
+</ul>
+<p><strong>Pour la meilleure image :</strong> brancher le PC à la box avec un <strong>câble réseau</strong>, et connecter le
+casque en <strong>Wi-Fi 5 GHz ou Wi-Fi 6</strong>, pas loin de la box.</p>
+<hr />
+<h2>1. Lancer pcstream sur le PC</h2>
+<ol>
+<li>Double-cliquer sur <strong><code>pcstream.exe</code></strong>. Rien à installer.</li>
+<li>Si Windows affiche <em>« Windows a protégé votre ordinateur »</em>, cliquer sur
+   <strong>Informations complémentaires</strong>, puis <strong>Exécuter quand même</strong>.</li>
+<li>Si une bulle indique <strong>« pcstream est bloqué par le pare-feu »</strong> : clic droit sur l'icône &gt;
+   <strong>Autoriser dans le pare-feu Windows…</strong> &gt; <strong>Oui</strong>, puis <strong>Oui</strong> dans la fenêtre de Windows.
+   (pcstream n'est autorisé que sur votre réseau local.)</li>
+<li>Une <strong>petite icône d'écran</strong> apparaît en bas à droite, près de l'horloge. Si elle n'est pas
+   visible, cliquer sur la petite flèche <strong>^</strong> à côté de l'horloge.</li>
+</ol>
+<p>C'est tout : pcstream tourne en arrière-plan, sans fenêtre.</p>
+<hr />
+<h2>2. Connecter le casque (une seule fois)</h2>
+<ol>
+<li>Sur le PC : <strong>clic droit sur l'icône pcstream &gt; Appairer un casque…</strong>
+   La suite est à faire dans les 2 minutes.</li>
+<li>Dans le casque : commander l'<strong>écran PC</strong> dans le <strong>menu Livraison</strong>.</li>
+<li>Un <strong>code à 6 chiffres</strong> s'affiche <strong>sous l'écran dans le casque</strong> et <strong>sur le PC</strong>.</li>
+<li><strong>Si les deux codes sont identiques :</strong></li>
+<li>dans le casque, appuyer sur <strong>A</strong> ;</li>
+<li>sur le PC, cliquer sur <strong>Oui</strong>.</li>
+</ol>
+<p>C'est fait. Les fois suivantes, l'écran se connecte tout seul dès qu'il apparaît dans le casque.</p>
+<blockquote>
+<p>⚠️ <strong>Si les codes sont différents, ou si une demande arrive sans que vous ayez rien fait,
+répondez Non.</strong> Quelqu'un d'autre essaie peut-être de se connecter à votre PC.</p>
+</blockquote>
+<hr />
+<h2>3. Utiliser l'écran</h2>
+<p>Viser l'écran avec la <strong>manette droite</strong> :</p>
+<table>
+<thead>
+<tr>
+<th>Bouton</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gâchette</strong></td>
+<td>clic gauche (maintenir = glisser)</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>clic droit</td>
+</tr>
+<tr>
+<td><strong>Joystick</strong></td>
+<td>faire défiler (haut/bas, gauche/droite)</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>ouvrir le clavier du casque pour écrire</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Déplacer l'écran :</strong> attraper la <strong>poignée</strong> sous l'image, placer l'écran à l'endroit voulu et
+lâcher : il reste là.</p>
+<p><strong>Agrandir ou réduire l'écran :</strong> tenir la poignée et pousser le <strong>joystick</strong> vers le haut
+(plus grand) ou vers le bas (plus petit). La taille est mémorisée pour les fois suivantes.</p>
+<p>L'image s'adapte toute seule : la netteté est réglée selon la distance de l'écran, et la
+qualité s'ajuste si le Wi-Fi faiblit.</p>
+<hr />
+<h2>4. Jouer à la manette</h2>
+<p>Le PC voit une <strong>manette Xbox</strong> : elle fonctionne dans tous les jeux compatibles manette.</p>
+<p><strong>Une seule fois :</strong> sur le PC, clic droit sur l'icône pcstream &gt; <strong>Installer le pilote
+manette…</strong>, puis accepter la confirmation de Windows. pcstream télécharge le pilote gratuit
+ViGEmBus sur sa page officielle et vérifie que c'est exactement la version contrôlée avant de
+l'installer.</p>
+<p><strong>Avec une manette Bluetooth</strong> (Xbox, PlayStation…) : la connecter au casque (Paramètres du
+Quest &gt; Appareils &gt; Bluetooth). Elle passe au PC toute seule dès qu'elle est utilisée, l'écran
+PC affiché.</p>
+<p><strong>Avec les manettes du Quest</strong> : maintenir <strong>≡</strong> (manette gauche) une seconde puis relâcher pour
+passer en <strong>mode manette</strong>. Même geste pour revenir à la souris. En mode manette, les joysticks
+ne déplacent plus dans le casque (ni téléportation ni rotation) : ils ne servent qu'au jeu PC.</p>
+<table>
+<thead>
+<tr>
+<th>Manettes du Quest</th>
+<th>Manette Xbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Joysticks (et clic des joysticks)</td>
+<td>joysticks gauche / droit</td>
+</tr>
+<tr>
+<td>A, B, X, Y</td>
+<td>A, B, X, Y</td>
+</tr>
+<tr>
+<td>Gâchettes</td>
+<td>LT / RT</td>
+</tr>
+<tr>
+<td>Boutons de prise (grip)</td>
+<td>LB / RB</td>
+</tr>
+<tr>
+<td>≡ (appui court)</td>
+<td>Start</td>
+</tr>
+<tr>
+<td>≡ maintenu + joystick droit</td>
+<td>croix directionnelle</td>
+</tr>
+<tr>
+<td>≡ maintenu + B</td>
+<td>View (Back)</td>
+</tr>
+<tr>
+<td><strong>Pointer avec la manette droite</strong></td>
+<td><strong>viser</strong> (comme une souris), en plus du joystick droit</td>
+</tr>
+</tbody>
+</table>
+<p>Les vibrations du jeu sont rendues dans la manette Bluetooth ou dans les manettes du Quest.</p>
+<blockquote>
+<p>Visée trop rapide ou trop lente ? Régler la <strong>sensibilité souris</strong> dans les options du jeu.</p>
+</blockquote>
+<hr />
+<h2>Le menu de l'icône (clic droit)</h2>
+<table>
+<thead>
+<tr>
+<th>Menu</th>
+<th>À quoi ça sert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Appairer un casque…</strong></td>
+<td>connecter un nouveau casque</td>
+</tr>
+<tr>
+<td><strong>Casques appairés</strong></td>
+<td>voir les casques connectés, en retirer un (il ne pourra plus se connecter)</td>
+</tr>
+<tr>
+<td><strong>Écran affiché</strong></td>
+<td>(PC avec plusieurs écrans) choisir l'écran à afficher dans le casque</td>
+</tr>
+<tr>
+<td><strong>Format vidéo</strong></td>
+<td>laisser <strong>Auto</strong> ; ne changer que si l'image pose problème</td>
+</tr>
+<tr>
+<td><strong>Son dans le casque</strong></td>
+<td>le son du PC joue dans le casque (activé par défaut)</td>
+</tr>
+<tr>
+<td><strong>Installer le pilote manette…</strong></td>
+<td>une seule fois, pour jouer à la manette (voir étape 4)</td>
+</tr>
+<tr>
+<td><strong>Pause</strong></td>
+<td>coupe l'image tout de suite, sans quitter</td>
+</tr>
+<tr>
+<td><strong>Démarrer avec Windows</strong></td>
+<td>pcstream se lance tout seul à l'allumage du PC</td>
+</tr>
+<tr>
+<td><strong>Ouvrir le journal</strong></td>
+<td>utile pour contacter le support</td>
+</tr>
+<tr>
+<td><strong>Effacer mes données et quitter</strong></td>
+<td>tout supprimer avant de désinstaller</td>
+</tr>
+<tr>
+<td><strong>Quitter</strong></td>
+<td>fermer pcstream</td>
+</tr>
+</tbody>
+</table>
+<p>La couleur de l'icône indique l'état : <strong>gris</strong> en attente, <strong>bleu</strong> connecté,
+<strong>vert</strong> appairage en cours, <strong>orange</strong> en pause.</p>
+<hr />
+<h2>Ça ne marche pas ?</h2>
+<p><strong>« PC introuvable » dans le casque</strong></p>
+<ul>
+<li>Vérifier que pcstream tourne sur le PC (icône près de l'horloge).</li>
+<li>Vérifier que le PC et le casque sont sur <strong>le même réseau</strong> : pas le Wi-Fi « invités », pas un
+  partage de connexion du téléphone.</li>
+<li>Le pare-feu bloque peut-être pcstream : si le menu de l'icône affiche
+  <strong>⚠ Autoriser dans le pare-feu Windows…</strong>, cliquer dessus et accepter.</li>
+<li>Si <code>pcstream.exe</code> a été déplacé dans un autre dossier, refaire cette autorisation (elle est
+  liée à l'emplacement du fichier).</li>
+</ul>
+<p><strong>Le casque a été réinitialisé, ou il ne se connecte plus</strong>
+Le retirer dans <strong>Casques appairés</strong>, puis refaire l'appairage (étape 2).</p>
+<p><strong>L'image saccade ou se fige par moments</strong></p>
+<ul>
+<li>Se rapprocher de la box, ou utiliser le Wi-Fi 5 GHz ou Wi-Fi 6.</li>
+<li>Brancher le PC à la box avec un câble.</li>
+<li>Éviter les gros téléchargements pendant l'utilisation de pcstream.</li>
+</ul>
+<p><strong>La manette ne fait rien dans le jeu</strong></p>
+<ul>
+<li>Le menu de l'icône doit afficher <strong>Manettes : pilote installé</strong>. Sinon, installer le pilote
+  (étape 4) ; après l'installation, un redémarrage du PC peut être nécessaire.</li>
+<li>Quelques jeux n'acceptent pas la souris et la manette en même temps : la visée en pointant ne
+  fonctionne pas avec eux, utiliser alors le joystick droit.</li>
+</ul>
+<p><strong>Certaines fenêtres ne réagissent pas aux clics</strong>
+Les fenêtres « administrateur » de Windows (installations, confirmations avec bouclier) ne
+peuvent pas être pilotées à distance, par sécurité. Les valider directement sur le PC.</p>
+<p><strong>L'image se fige pendant une confirmation Windows</strong>
+C'est normal : Windows cache son écran de confirmation de sécurité à toutes les applis. L'image
+repart dès la validation sur le PC.</p>
+<hr />
+<h2>Sécurité et vie privée</h2>
+<ul>
+<li>L'image et les commandes sont <strong>chiffrées</strong> entre votre PC et votre casque.</li>
+<li>Seuls les casques <strong>que vous avez appairés</strong> peuvent se connecter, et uniquement depuis
+  <strong>votre réseau local</strong>.</li>
+<li>Rien ne passe par internet, et rien n'est envoyé ailleurs que vers votre casque. Seule
+  exception, et uniquement à votre demande : le téléchargement du pilote manette depuis sa page
+  officielle (GitHub), refusé s'il ne correspond pas octet pour octet à la version contrôlée.</li>
+</ul>
+<hr />
+<h2>Désinstaller</h2>
+<ol>
+<li>Clic droit sur l'icône &gt; <strong>Effacer mes données et quitter</strong>.</li>
+<li>Supprimer le fichier <strong><code>pcstream.exe</code></strong>.</li>
+<li>Si le pilote manette a été installé : Paramètres Windows &gt; Applications &gt; <strong>ViGEm Bus Driver</strong><blockquote>
+<p>Désinstaller.</p>
+</blockquote>
+</li>
+</ol>
+<hr />
+<p><em>Les licences des composants utilisés sont dans <code>THIRD_PARTY_NOTICES.txt</code>.</em></p>
+
+<footer>OutSight · Contact : <a href="https://discord.gg/G8QJaYCkbs">discord.gg/G8QJaYCkbs</a></footer>
+</div>
+</body>
+</html>
