@@ -26,6 +26,8 @@ li { margin-bottom: 8px; }
 .video video { display: block; width: 100%; height: auto; border-radius: 12px; background: #1b1510; }
 .video p { margin: 6px 0 0; font-size: 14px; color: var(--soft); }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px; }
+.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 640px) { .grid.two { grid-template-columns: 1fr; } }
 .grid figure { margin: 0; }
 .grid img { width: 100%; height: auto; border-radius: 10px; display: block; }
 .grid figcaption { font-size: 15px; color: var(--soft); margin-top: 6px; }
