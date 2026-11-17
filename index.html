@@ -63,7 +63,44 @@
   <figure><img src="/img/f_decor.jpg" width="1280" height="720" loading="lazy" alt="A hand pushing the slats of window blinds"><figcaption><strong>Interact with the decor</strong>Push the blinds aside with your hand.</figcaption></figure>
   <figure><img src="/img/f_teleport.jpg" width="1280" height="720" loading="lazy" alt="Windows filled with streaks of light during a teleport"><figcaption><strong>Teleport to other worlds</strong>Your whole room travels.</figcaption></figure>
   <figure><img src="/img/f_roof.jpg" width="1280" height="720" loading="lazy" alt="View from the roof of the elevator over a neon city with flying cars"><figcaption><strong>Take the elevator</strong>Step outside and change your perspective.</figcaption></figure>
+  <figure><img src="/img/f_pcstream.jpg" width="1280" height="720" loading="lazy" alt="A Windows PC screen floating in the room, under a ceiling window"><figcaption><strong>Stream your PC</strong>Your PC screen, right in your room.</figcaption></figure>
 </div>
+
+<h2 id="features">Features in detail</h2>
+<div class="feats">
+  <article class="feat"><video data-src="/img/feat_draw.mp4" poster="/img/feat_draw.jpg" width="960" height="540" muted loop playsinline preload="none" aria-label="Drawing a window on a wall"></video>
+    <div><h3>Draw a window</h3><p>Trace the outline of a window on a real wall with your fingertip. The frame appears, the wall opens, and a world is waiting behind it. Move and resize your windows whenever you like.</p></div></article>
+  <article class="feat"><video data-src="/img/feat_ceiling.mp4" poster="/img/feat_ceiling.jpg" width="960" height="540" muted loop playsinline preload="none" aria-label="Windows on the ceiling"></video>
+    <div><h3>Even on the ceiling</h3><p>Windows are not limited to walls: draw them on the ceiling, or even on the floor, and look up at the world above your room.</p></div></article>
+  <article class="feat"><video data-src="/img/feat_delivery.mp4" poster="/img/feat_delivery.jpg" width="960" height="540" muted loop playsinline preload="none" aria-label="Ordering in the delivery menu, then a drone flying into the room"></video>
+    <div><h3>Express delivery</h3><p>Open the delivery menu and order an object: flight console, music, tape player, whiteboard, PC screen… A drone comes in through a ceiling window and brings it into your room.</p></div></article>
+  <article class="feat"><video data-src="/img/feat_music.mp4" poster="/img/feat_music.jpg" width="960" height="540" muted loop playsinline preload="none" aria-label="Taking a cassette from a rack and holding the tape player"></video>
+    <div><h3>Play your music</h3><p>Pick a cassette from the rack and play it on the tape player, with the city going by outside your window.</p></div></article>
+  <article class="feat"><video data-src="/img/feat_owl.mp4" poster="/img/feat_owl.jpg" width="960" height="540" muted loop playsinline preload="none" aria-label="An owl flying to an open hand"></video>
+    <div><h3>Your owl</h3><p>Hold out your hand: your owl flies across the room and lands on it. It keeps you company while you watch the world outside.</p></div></article>
+  <article class="feat"><video data-src="/img/feat_decor.mp4" poster="/img/feat_decor.jpg" width="960" height="540" muted loop playsinline preload="none" aria-label="A hand pushing window blinds aside"></video>
+    <div><h3>A decor that reacts</h3><p>The room responds to your hands: push the blinds aside to look at the city, and watch the lanterns hanging in front of the window.</p></div></article>
+  <article class="feat"><video data-src="/img/feat_teleport.mp4" poster="/img/feat_teleport.jpg" width="960" height="540" muted loop playsinline preload="none" aria-label="The windows fill with light streaks, then a new world appears"></video>
+    <div><h3>Teleport to other worlds</h3><p>Send your whole room to another world: the windows fill with light, and when it settles, a new world is outside. Sensitive to flashing lights? Sensitive mode replaces the effect with a simple fade.</p></div></article>
+  <article class="feat"><video data-src="/img/feat_elevator.mp4" poster="/img/feat_elevator.jpg" width="960" height="540" muted loop playsinline preload="none" aria-label="Pressing ROOF ACCESS in the elevator and arriving on the roof"></video>
+    <div><h3>Take the elevator</h3><p>Step into the elevator, press <em>Roof access</em> and ride up: from the roof, you see the world from outside your room.</p></div></article>
+  <article class="feat"><video data-src="/img/feat_pcstream.mp4" poster="/img/feat_pcstream.jpg" width="960" height="540" muted loop playsinline preload="none" aria-label="A PC screen floating in the room, showing a web page"></video>
+    <div><h3>Stream your PC</h3><p>Order the PC screen and your Windows desktop appears in the headset, over your Wi-Fi, next to your windows. It works with <a href="/pcstream/">pcstream</a>, a small free program for your PC.</p></div></article>
+</div>
+<script>
+(function () {
+  var vids = document.querySelectorAll('.feat video');
+  function load(v) { if (!v.src) { v.src = v.getAttribute('data-src'); } }
+  if (!('IntersectionObserver' in window)) { vids.forEach(function (v) { load(v); v.autoplay = true; v.play && v.play().catch(function () {}); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) { load(v); var p = v.play(); if (p) p.catch(function () {}); } else if (v.src) { v.pause(); }
+    });
+  }, { rootMargin: '200px 0px' });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
 
 <h2>More</h2>
 <div class="more">
@@ -84,6 +121,19 @@
   <li><strong>Une pièce à votre image</strong> : décorez, écoutez votre musique, affichez l'écran de votre PC, et adoptez une chouette.</li>
 </ul>
 <p>OutSight est en accès anticipé et en développement actif, avec une priorité : la découverte des mondes. Votre avis façonne le jeu : rejoignez la communauté sur <a href="https://discord.gg/G8QJaYCkbs">Discord</a> et dites-nous quel monde vous voulez voir par votre fenêtre.</p>
+<h3>Les fonctionnalités en détail</h3>
+<p>Les vidéos de la section <a href="#features">Features in detail</a> ci-dessus montrent, dans l'ordre :</p>
+<ul>
+  <li><strong>Dessiner une fenêtre</strong> : tracez le contour d'une fenêtre sur un vrai mur du bout du doigt. Le cadre apparaît, le mur s'ouvre, et un monde vous attend derrière. Déplacez et redimensionnez vos fenêtres quand vous voulez.</li>
+  <li><strong>Même au plafond</strong> : les fenêtres ne se limitent pas aux murs. Dessinez-en au plafond, ou même au sol, et levez les yeux vers le monde au-dessus de votre pièce.</li>
+  <li><strong>Livraison express</strong> : ouvrez le menu de livraison et commandez un objet (console de vol, musique, lecteur de cassettes, tableau blanc, écran PC…). Un drone entre par une fenêtre du plafond et l'apporte dans votre pièce.</li>
+  <li><strong>Écoutez votre musique</strong> : prenez une cassette dans le rack et écoutez-la sur le lecteur, avec la ville qui défile derrière votre fenêtre.</li>
+  <li><strong>Votre chouette</strong> : tendez la main, votre chouette traverse la pièce et vient s'y poser. Elle vous tient compagnie pendant que vous regardez le monde dehors.</li>
+  <li><strong>Un décor qui réagit</strong> : la pièce répond à vos mains. Écartez les lames du store pour regarder la ville, devant les lanternes suspendues à la fenêtre.</li>
+  <li><strong>Téléportez-vous vers d'autres mondes</strong> : envoyez toute votre pièce vers un autre monde. Les fenêtres se remplissent de lumière, et quand elle retombe, un nouveau monde est dehors. Sensible aux flashs lumineux ? Le mode sensible remplace l'effet par un simple fondu.</li>
+  <li><strong>Prenez l'ascenseur</strong> : entrez dans l'ascenseur, appuyez sur <em>Roof access</em> et montez : depuis le toit, vous voyez le monde depuis l'extérieur de votre pièce.</li>
+  <li><strong>Affichez votre PC</strong> : commandez l'écran PC et votre bureau Windows apparaît dans le casque, par votre Wi-Fi, à côté de vos fenêtres. Il fonctionne avec <a href="/pcstream/">pcstream</a>, un petit programme gratuit pour votre PC.</li>
+</ul>
 <p>Aussi en français : <a href="/worlds/#fr">les mondes</a> · <a href="/faq/#fr">FAQ</a> · <a href="/presskit/#fr">kit presse</a> · <a href="/pcstream/">stream PC</a>.</p>
 </section>
 

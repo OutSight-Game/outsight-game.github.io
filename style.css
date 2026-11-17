@@ -30,6 +30,13 @@ li { margin-bottom: 8px; }
 .grid img { width: 100%; height: auto; border-radius: 10px; display: block; }
 .grid figcaption { font-size: 15px; color: var(--soft); margin-top: 6px; }
 .grid figcaption strong { color: var(--ink); display: block; }
+.feats { display: flex; flex-direction: column; gap: 36px; margin-top: 20px; }
+.feat { display: grid; grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center; }
+.feat:nth-child(even) video { order: 2; }
+.feat video { display: block; width: 100%; height: auto; border-radius: 12px; background: #1b1510; }
+.feat h3 { margin: 0 0 6px; }
+.feat p { margin: 0; color: var(--soft); }
+@media (max-width: 640px) { .feat { grid-template-columns: 1fr; gap: 10px; } .feat:nth-child(even) video { order: 0; } }
 .more { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 20px; }
 .more a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; text-decoration: none; color: var(--ink); }
 .more a:hover { border-color: var(--accent); }
